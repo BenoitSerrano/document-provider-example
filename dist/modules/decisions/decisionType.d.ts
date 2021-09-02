@@ -2,10 +2,13 @@ import { mongoIdType } from '../../utils';
 export type { decisionType, labelTreatmentsType };
 declare type decisionType = {
     _id: mongoIdType;
+    blocOccultation?: number;
+    chamberId: string;
     chamberName: string;
     dateCreation?: string;
     dateDecision?: string;
     decatt?: number[];
+    formation?: string;
     jurisdictionName: string;
     labelStatus: 'toBeTreated' | 'loaded' | 'done' | 'exported';
     labelTreatments: labelTreatmentsType;
@@ -17,6 +20,7 @@ declare type decisionType = {
     pseudoText: string;
     pubCategory: string;
     publication?: string[];
+    solution: string;
     sourceId: number;
     sourceName: string;
 };

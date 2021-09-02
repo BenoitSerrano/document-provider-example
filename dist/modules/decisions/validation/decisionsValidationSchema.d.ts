@@ -8,7 +8,13 @@ declare const decisionsValidationSchema: {
             _id: {
                 bsonType: string;
             };
+            blocOccultation: {
+                bsonType: string;
+            };
             chamberName: {
+                bsonType: string;
+            };
+            chamberId: {
                 bsonType: string;
             };
             dateDecision: {
@@ -23,6 +29,9 @@ declare const decisionsValidationSchema: {
                 items: {
                     bsonType: string;
                 };
+            };
+            formation: {
+                bsonType: string;
             };
             jurisdictionName: {
                 bsonType: string;
@@ -84,6 +93,9 @@ declare const decisionsValidationSchema: {
                 items: {
                     bsonType: string;
                 };
+            };
+            solution: {
+                bsonType: string;
             };
             sourceId: {
                 bsonType: string;

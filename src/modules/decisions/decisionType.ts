@@ -4,10 +4,13 @@ export type { decisionType, labelTreatmentsType };
 
 type decisionType = {
   _id: mongoIdType;
+  blocOccultation?: number;
+  chamberId: string;
   chamberName: string;
   dateCreation?: string;
   dateDecision?: string;
   decatt?: number[];
+  formation?: string;
   jurisdictionName: string;
   labelStatus: 'toBeTreated' | 'loaded' | 'done' | 'exported';
   labelTreatments: labelTreatmentsType;
@@ -19,6 +22,7 @@ type decisionType = {
   pseudoText: string;
   pubCategory: string;
   publication?: string[];
+  solution: string;
   sourceId: number;
   sourceName: string;
 };

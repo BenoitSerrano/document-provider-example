@@ -8,7 +8,9 @@ var decisionsValidationSchema = {
         required: ['labelStatus', 'labelTreatments', 'originalText', 'sourceId'],
         properties: {
             _id: { bsonType: 'objectId' },
+            blocOccultation: { bsonType: 'number' },
             chamberName: { bsonType: 'string' },
+            chamberId: { bsonType: 'string' },
             dateDecision: { bsonType: 'date' },
             dateCreation: { bsonType: 'date' },
             decatt: {
@@ -18,6 +20,7 @@ var decisionsValidationSchema = {
                     bsonType: 'number',
                 },
             },
+            formation: { bsonType: 'string' },
             jurisdictionName: { bsonType: 'string' },
             labelStatus: { bsonType: 'string', enum: ['toBeTreated', 'loaded', 'done', 'exported'] },
             labelTreatments: {
@@ -56,6 +59,7 @@ var decisionsValidationSchema = {
                     bsonType: 'string',
                 },
             },
+            solution: { bsonType: 'string' },
             sourceId: { bsonType: 'number' },
             sourceName: { bsonType: 'string' },
         },
